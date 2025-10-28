@@ -3,6 +3,7 @@ import br.com.alura.screenmatch.calculos.FiltroDeRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
@@ -54,5 +55,20 @@ public class Principal {
         ep.setSerie(friends);
         ep.setTotalVisualizacoes(90);
         filtro.filtra(ep);
+
+        var filmeBom = new Filme();
+        filmeBom.setNome("Harry Potter e o Cálice de Fogo");
+        filmeBom.setAnoDeLancamento(2004);
+        filmeBom.setDuracaoEmMinutos(200);
+        filmeBom.avaliar(9.4);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+
+        listaDeFilmes.add(favorito);
+        listaDeFilmes.add(outroFilme);
+        listaDeFilmes.add(filmeBom);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro Filme: " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
     }
 }
