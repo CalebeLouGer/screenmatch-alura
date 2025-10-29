@@ -7,10 +7,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme favorito = new Filme();
-
-        favorito.setNome("Demon Slayer: Castelo Infinito");
-        favorito.setAnoDeLancamento(2025);
+        Filme favorito = new Filme("Demon Slayer: Castelo Infinito",2025);
         favorito.setDuracaoEmMinutos(185);
         favorito.setIncluidoNoPlano(true);
 
@@ -22,10 +19,7 @@ public class Principal {
         String mensagemMedia = String.format("Média de avaliações do Filme: %.1f", favorito.retornarMedia());
         //System.out.println(mensagemMedia);
 
-        Serie friends = new Serie();
-
-        friends.setNome("Friends");
-        friends.setAnoDeLancamento(1990);
+        Serie friends = new Serie("Friends",1990);
         friends.exibirFichaTecnica();
         friends.setAtiva(true);
         friends.setIncluidoNoPlano(true);
@@ -36,9 +30,7 @@ public class Principal {
 
         CalculadoraDeTempo calc = new CalculadoraDeTempo();
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Quarteto Fantástico: Origem");
-        outroFilme.setAnoDeLancamento(2025);
+        Filme outroFilme = new Filme("Quarteto Fantástico: Origem",2025);
         outroFilme.setDuracaoEmMinutos(200);
         outroFilme.setIncluidoNoPlano(true);
 
@@ -56,9 +48,7 @@ public class Principal {
         ep.setTotalVisualizacoes(90);
         filtro.filtra(ep);
 
-        var filmeBom = new Filme();
-        filmeBom.setNome("Harry Potter e o Cálice de Fogo");
-        filmeBom.setAnoDeLancamento(2004);
+        var filmeBom = new Filme("Harry Potter e o Cálice de Fogo",2004);
         filmeBom.setDuracaoEmMinutos(200);
         filmeBom.avaliar(9.4);
 
