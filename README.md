@@ -75,7 +75,7 @@ screenmatch-alura/
 │   ├── validacao/
 │   │   └── …  
 │   ├── principal/
-│   │   └── Principal.java  
+│   │   └── br.com.alura.screenmatch.principal.Principal.java  
 ├── data/
 │   └── filmes-series.csv (ou outro arquivo de entrada)  
 ├── .gitignore
