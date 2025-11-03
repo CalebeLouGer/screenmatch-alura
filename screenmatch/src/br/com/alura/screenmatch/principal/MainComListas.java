@@ -4,7 +4,7 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class MainComListas {
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class MainComListas {
         filmeBom.avaliar(10);
         var friends = new Serie("Friends",1990);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(favorito);
         lista.add(outroFilme);
         lista.add(filmeBom);
@@ -31,5 +31,26 @@ public class MainComListas {
                 System.out.println("--- Classificação: " + filme.getClassificacao());
             }
         }
+
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Guilherme Andrade");
+        buscaPorArtista.add("João Manô");
+        buscaPorArtista.add("Lucas Branco");
+        buscaPorArtista.add("Calebe Lourenço");
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(buscaPorArtista);
+        System.out.println("Depois da ordenação");
+        System.out.println(buscaPorArtista);
+        System.out.println(lista);
+        Collections.sort(lista);
+        System.out.println("Lista de Título Ordenados: ");
+        System.out.println(lista);
+
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println(lista);
+
     }
 }
