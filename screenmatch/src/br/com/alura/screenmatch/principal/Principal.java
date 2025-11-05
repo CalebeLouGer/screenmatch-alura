@@ -50,7 +50,7 @@ public class Principal {
         ep.setTotalVisualizacoes(90);
         filtro.filtra(ep);
 
-        var filmeBom = new Filme("Harry Potter e o Cálice de Fogo",2004);
+        var filmeBom = new Filme("Harry Potter",2004);
         filmeBom.setDuracaoEmMinutos(200);
         filmeBom.avaliar(9.4);
 
